@@ -186,6 +186,57 @@ class ToricTQFT:
             'ground_state_deg': 4
         }
 
+
+"""
+In Python, a partial class can be thought of as a way to split the implementation of a class into multiple files or logical sections for better organization and maintainability. Python does not have a native "partial class" keyword like some languages (e.g., C#), but you can achieve a similar effect by combining classes with decorators or manually merging definitions.
+
+Here is how you can use decorators and a concept similar to partial classes:
+
+In Python, you can use comment blocks for documentation or explanation purposes. While Python does not have a specific "comment block" syntax (like /* */ in other languages), you can use:
+
+Multiple Line Comments: Use # for each line.
+Docstrings: Use triple quotes (""" """ or ''' ''') for block comments inside functions, classes, or modules.
+
+# This is a comment block explaining the next part of the code.
+# You can use multiple `#` symbols to create a comment block.
+# Each line starts with a `#` to indicate a comment.
+
+x = 10  # Variable initialization
+y = 20  # Another variable
+
+
+"""This block of text explains the following code.
+It is often used as a docstring but can also serve
+as a multi-line comment in a script."""
+
+
+def add_numbers(a, b):
+    """
+    This function adds two numbers and returns the result.
+    Arguments:
+    - a: First number
+    - b: Second number
+    """
+    return a + b
+
+"""
+
+# Define a decorator for combining class definitions
+def partial_class(cls):
+    if not hasattr(partial_class, "_registry"):
+        partial_class._registry = {}
+    
+    # Merge with an existing definition if available
+    if cls.__name__ in partial_class._registry:
+        base_class = partial_class._registry[cls.__name__]
+        for attr in dir(cls):
+            if not attr.startswith('__'):
+                setattr(base_class, attr, getattr(cls, attr))
+    else:
+        partial_class._registry[cls.__name__] = cls
+    return partial_class._registry[cls.__name__]
+    
+@partial_class
 class AnyonFusion:
     def __init__(self):
         # Initialize fusion algebra
@@ -228,7 +279,7 @@ class AnyonFusion:
         return np.sqrt(sum(self.quantum_dimension(a)**2 
                          for a in ['1','e','m','em']))
 
-
+@partial_class
 class AnyonFusion:
    def __init__(self):
        self.particles = {'1', 'e', 'm', 'em'}  # Particle types
