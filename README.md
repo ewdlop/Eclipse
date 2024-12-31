@@ -39,4 +39,40 @@ class RetardedPotential:
            a**2 - (v.cross(a))**2/self.c**2
        )
        return P
+
+      def lienard_wiechert(self, r, t, source):
+       """Calculate Liénard-Wiechert potentials and fields"""
+       # Retarded time calculation
+       t_ret = t - np.linalg.norm(r - source.position(t))/self.c
+       
+       # Get source properties at retarded time 
+       pos = source.position(t_ret)
+       vel = source.velocity(t_ret)
+       acc = source.acceleration(t_ret)
+       
+       # Calculate potentials
+       R = r - pos
+       R_mag = np.linalg.norm(R)
+       n = R/R_mag
+       beta = vel/self.c
+       gamma = 1/np.sqrt(1 - np.dot(beta,beta))
+       
+       # Fields
+       self.E = (
+           source.q/(4*np.pi*epsilon_0) * (
+               n-beta/(gamma**2*(1-np.dot(n,beta))**3) * 
+               (1 + 1/(self.c*R_mag)*(1-np.dot(n,beta)))
+           )
+       )
+       
+       self.B = n.cross(self.E)/self.c
+       
+       return self.E, self.B
+       
+   def radiated_power(self):
+       """Total radiated power using Poynting vector"""
+       S = np.cross(self.E, self.B)/mu_0
+       return np.linalg.norm(S)
+
+
 ```
