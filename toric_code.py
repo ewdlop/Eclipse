@@ -138,10 +138,10 @@ def fusion_rules():
     }
     return rules
 
-class ToricTQFT:
-    def init(self, L):
-        self.L = L
-        self.ground_state = self._initialize_ground_state()
+class ToricTQFT(ToricCodeAnyons):
+   def __init__(self, L):
+       super().__init__(L)
+       self.ground_state = self._initialize_ground_state()
 
     def initializeground_state(self):
         """Initialize ground state as +1 eigenstate of all stabilizers"""
