@@ -40,7 +40,7 @@ class RetardedPotential:
        )
        return P
 
-      def lienard_wiechert(self, r, t, source):
+   def lienard_wiechert(self, r, t, source):
        """Calculate Liénard-Wiechert potentials and fields"""
        # Retarded time calculation
        t_ret = t - np.linalg.norm(r - source.position(t))/self.c
