@@ -205,19 +205,20 @@ x = 10  # Variable initialization
 y = 20  # Another variable
 
 
-"""This block of text explains the following code.
-It is often used as a docstring but can also serve
-as a multi-line comment in a script."""
+    This block of text explains the following code.
+    It is often used as a docstring but can also serve
+    as a multi-line comment in a script.
+    
 
 
-def add_numbers(a, b):
-    """
-    This function adds two numbers and returns the result.
-    Arguments:
-    - a: First number
-    - b: Second number
-    """
-    return a + b
+    def add_numbers(a, b):
+        """
+        This function adds two numbers and returns the result.
+        Arguments:
+        - a: First number
+        - b: Second number
+        """
+        return a + b
 
 """
 
