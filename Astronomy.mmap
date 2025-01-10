@@ -1,0 +1,102 @@
+mindmap
+  root((Astronomy))
+    Solar System
+        Sun
+            Solar structure
+            Solar activity
+            Nuclear fusion
+        Terrestrial planets
+            Mercury
+            Venus
+            Earth
+            Mars
+        Gas giants
+            Jupiter
+            Saturn
+        Ice giants
+            Uranus
+            Neptune
+        Small bodies
+            Asteroids
+            Comets
+            Kuiper Belt objects
+    Stars
+        Life cycle
+            Stellar formation
+            Main sequence
+            Giant phase
+            Stellar death
+        Classification
+            Spectral types
+            Luminosity classes
+            Variable stars
+        Binary systems
+            Contact binaries
+            Eclipsing binaries
+            X-ray binaries
+    Galaxies
+        Structure
+            Spiral arms
+            Galactic nucleus
+            Halo
+        Types
+            Spiral
+            Elliptical
+            Irregular
+            Active galaxies
+        Local Group
+            Milky Way
+            Andromeda
+            Satellite galaxies
+    Cosmology
+        Big Bang theory
+            Inflation
+            Nucleosynthesis
+            CMB radiation
+        Dark matter
+            Galactic rotation
+            Gravitational lensing
+            Galaxy clusters
+        Dark energy
+            Cosmic expansion
+            Lambda-CDM model
+            Vacuum energy
+    Exoplanets
+        Detection methods
+            Transit
+            Radial velocity
+            Direct imaging
+        Characteristics
+            Mass
+            Orbit
+            Atmosphere
+        Habitability
+            Goldilocks zone
+            Biosignatures
+            SETI
+    Observational
+        Telescopes
+            Optical
+            Radio
+            Space-based
+        Techniques
+            Photometry
+            Spectroscopy
+            Interferometry
+        Data analysis
+            Image processing
+            Statistical methods
+            Machine learning
+    Space Exploration
+        Missions
+            Lunar
+            Mars
+            Deep space
+        Technology
+            Propulsion
+            Life support
+            Communications
+        Future plans
+            Moon bases
+            Mars colonies
+            Interstellar probes
