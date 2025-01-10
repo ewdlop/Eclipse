@@ -1,6 +1,6 @@
 # Eclipse
 
-日月神教
+## [日月神教](https://en.wikipedia.org/wiki/Retarded_potential)
 
 ```python
 class RetardedPotential:
